@@ -1,0 +1,82 @@
+body {
+  background-color: #f1f1f1;
+}
+
+.nav-bar {
+  background-color: #fff;
+  width: 100%;
+  color: #f1f1f1;
+  z-index: 100000000;
+  box-shadow: 0px 3px 10px solid rgba(235, 3, 3, 0.5);
+}
+
+.cart-btn {
+  font-weight: bold;
+  border: 2px solid #c80f2e;
+  background-color: #c80f2e;
+  transition: 0.3s all ease-in-out;
+}
+.cart-btn:hover {
+  border: 2px solid #970b22;
+  color: #970b22;
+  background-color: transparent;
+}
+
+.logo {
+  height: 30px;
+  width: auto;
+}
+
+.menu li a {
+  color: #363636;
+  transition: 0.3s all ease-in-out;
+}
+.menu li a:hover {
+  color: #c80f2e;
+}
+
+.menu li:last-child a {
+  color: #ffffff;
+}
+.menu li:last-child a:hover {
+  color: #c80f2e;
+}
+
+.hero {
+  width: 100%;
+  background: #f1f1f1;
+}
+
+.menu {
+  background-color: #fff;
+}
+
+.card {
+  background-color: #fff;
+  transition: 0.3s all ease-in-out;
+}
+.card:hover {
+  transform: scale(1.01);
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.274);
+}
+
+.order-btn {
+  color: #f1f1f1;
+}
+
+.pizza-size {
+  background-color: #363636;
+  color: #f1f1f1;
+}
+
+.add-to-cart {
+  border: 2px solid #c80f2e;
+  color: #c80f2e;
+  transition: 0.3s all ease-in-out;
+  outline: none;
+}
+.add-to-cart:hover {
+  background-color: #c80f2e;
+  border: 2px solid #c80f2e;
+  color: #f1f1f1;
+}

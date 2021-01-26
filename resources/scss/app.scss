@@ -1,1 +1,86 @@
 @import'_variable.scss';
+body{
+    background-color: $light;
+    
+}
+
+.nav-bar{
+    background-color: #fff;
+    width: 100%;
+    color: $light;
+    z-index: 100000000;
+    box-shadow: 0px 3px 10px solid rgba(235, 3, 3, 0.5);
+}
+
+.cart-btn{
+    font-weight: bold;
+    border: 2px solid $prymari;
+    background-color: $prymari;
+    transition: $transition-slow;
+    &:hover{
+        border: 2px solid $prymari-hover;
+        color: $prymari-hover;
+        background-color: transparent;
+    }
+}
+
+.logo{
+    height: 30px;
+    width: auto;
+}
+
+.menu li a{
+    color: $dark;
+    transition:$transition-slow;
+    &:hover{
+        color: $prymari;
+    }
+}
+
+.menu li:last-child a{
+    color: #ffffff;
+    &:hover{
+        color: $prymari;
+    }
+}
+
+.hero{
+    width: 100%;
+    background: $light;
+}
+
+
+.menu{
+    background-color: #fff;
+}
+
+.card{
+    background-color: #fff;
+    transition: $transition-slow;
+    
+    &:hover{
+        transform: scale(1.01);
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.274);
+    }
+}
+
+.order-btn{
+    color: $light;
+}
+
+.pizza-size{
+    background-color: $dark;
+    color: $light;
+}
+
+.add-to-cart{
+    border: 2px solid $prymari;
+    color: $prymari;
+    transition: $transition-slow;
+    outline: none;
+    &:hover{
+        background-color: $prymari;
+        border: 2px solid $prymari;
+        color: $light;
+    }
+}
