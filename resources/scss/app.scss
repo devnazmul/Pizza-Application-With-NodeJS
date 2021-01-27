@@ -1,15 +1,20 @@
 @import'_variable.scss';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{ 
+    font-family: 'Poppins', sans-serif;
+}
 body{
     background-color: $light;
-    
 }
-
+.primary-h{
+    color: $prymari;
+}
 .nav-bar{
     background-color: #fff;
     width: 100%;
     color: $light;
     z-index: 100000000;
-    box-shadow: 0px 3px 10px solid rgba(235, 3, 3, 0.5);
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.5);
 }
 
 .cart-btn{
@@ -69,8 +74,8 @@ body{
 }
 
 .pizza-size{
-    background-color: $dark;
-    color: $light;
+    background-color: $light;
+    color: $dark;
 }
 
 .add-to-cart{
@@ -82,5 +87,92 @@ body{
         background-color: $prymari;
         border: 2px solid $prymari;
         color: $light;
+    }
+}
+
+
+
+
+
+
+.cart{
+    height: calc(100vh-86px);
+}
+
+.contact{
+    background-color: #fff;
+    // height: calc(100vh - (.75rem + .75rem + 1.25rem + 1.25rem));
+    flex-direction: column;
+}
+.contact-h1, .about-h1{
+    color: $prymari;
+}
+.contact-submit{
+    background-color: $prymari;
+    transition: $transition-slow;
+    border: 2px solid $prymari;
+    cursor: pointer;
+    &:hover{
+        background-color: #fff;
+        color: $prymari;
+        border: 2px solid $prymari;
+
+    }
+}
+
+
+
+.about{
+    // height: calc(100vh - (.75rem + .75rem + 1.25rem + 1.25rem));
+}
+
+.social-links ul li{
+    border-radius: 30px;
+    padding: 5px 5px;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    font-size: 2rem;
+    background-color: #fff;
+    transition: $transition-slow;
+    border: 2px solid $prymari;
+    color: $prymari;
+    &:hover{
+    background-color: $prymari;
+    border: 2px solid $prymari;
+    color: #fff;
+    }
+}
+
+.cart-h1{
+    color: $prymari;
+}
+.total-price{
+    color: $prymari;
+}
+.adress-input{
+    height: 50px;
+}
+.cart-order-btn{
+
+    background-color: #fff;
+    &:hover{
+        color: #fff;
+    }
+
+}
+
+
+
+footer{
+    background-color: $light;
+}
+footer p{
+    color: #000;
+}
+.fotter-link{
+    color: $prymari;
+    &:hover{
+        color: $prymari-hover;
     }
 }

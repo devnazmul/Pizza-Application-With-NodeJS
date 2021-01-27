@@ -13,15 +13,17 @@
     <nav class="nav-bar fixed">
         <div class="container mx-auto flex py-3 items-center justify-between">
             <div>
-                <a href="#"><img class="logo" src="img/logo.png" alt="logo"></a>
+                <a href="/"><img class="logo" src="img/logo.png" alt="logo"></a>
             </div>
             <div>
                 <ul class="menu flex items-center">
-                    <li class="mx-2"><a href="#">Home</a></li>
-                    <li class="mx-2"><a href="#">Menu</a></li>
-                    <li class="mx-2"><a href="#">About</a></li>
-                    <li class="mx-2"><a href="#">Contact</a></li>
-                    <li class="mx-2"><a class="order-btn block cart-btn px-10 py-1 rounded-full" href="#"><i class="fab fa-opencart"></i></a></li>
+                    <li class="mx-2"><a href="/">Home</a></li>
+                    <li class="mx-2"><a href="/menu">Menu</a></li>
+                    <li class="mx-2"><a href="/about">About</a></li>
+                    <li class="mx-2"><a href="/contact">Contact</a></li>
+                    <li class="mx-2"><a href="/login">Log in</a></li>
+                    <li class="mx-2"><a href="/registration">Create Acount</a></li>
+                    <li class="mx-2"><a class="font-bold order-btn block cart-btn px-10 py-1 rounded-full" href="/cart"><i class="fab fa-opencart"></i></a></li>
                 </ul>
             </div>
         </div>
@@ -29,6 +31,11 @@
 
     <%- body %>
 
+    <footer class="py-5">
+        <div class="mx-auto container text-center">
+            <p>©2021 <a class="fotter-link" href="https://www.github.com/devnazmul">Developer Nazmul</a>. All rights reserved.</p>
+        </div>
+    </footer>
     <script src="js/app.js"></script>
 </body>
 </html>

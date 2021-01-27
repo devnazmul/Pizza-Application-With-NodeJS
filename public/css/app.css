@@ -1,5 +1,14 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap);
+* {
+  font-family: "Poppins", sans-serif;
+}
+
 body {
   background-color: #f1f1f1;
+}
+
+.primary-h {
+  color: #c80f2e;
 }
 
 .nav-bar {
@@ -7,7 +16,7 @@ body {
   width: 100%;
   color: #f1f1f1;
   z-index: 100000000;
-  box-shadow: 0px 3px 10px solid rgba(235, 3, 3, 0.5);
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.5);
 }
 
 .cart-btn {
@@ -65,8 +74,8 @@ body {
 }
 
 .pizza-size {
-  background-color: #363636;
-  color: #f1f1f1;
+  background-color: #f1f1f1;
+  color: #363636;
 }
 
 .add-to-cart {
@@ -79,4 +88,81 @@ body {
   background-color: #c80f2e;
   border: 2px solid #c80f2e;
   color: #f1f1f1;
+}
+
+.cart {
+  height: calc(100vh-86px);
+}
+
+.contact {
+  background-color: #fff;
+  flex-direction: column;
+}
+
+.contact-h1, .about-h1 {
+  color: #c80f2e;
+}
+
+.contact-submit {
+  background-color: #c80f2e;
+  transition: 0.3s all ease-in-out;
+  border: 2px solid #c80f2e;
+  cursor: pointer;
+}
+.contact-submit:hover {
+  background-color: #fff;
+  color: #c80f2e;
+  border: 2px solid #c80f2e;
+}
+
+.social-links ul li {
+  border-radius: 30px;
+  padding: 5px 5px;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  font-size: 2rem;
+  background-color: #fff;
+  transition: 0.3s all ease-in-out;
+  border: 2px solid #c80f2e;
+  color: #c80f2e;
+}
+.social-links ul li:hover {
+  background-color: #c80f2e;
+  border: 2px solid #c80f2e;
+  color: #fff;
+}
+
+.cart-h1 {
+  color: #c80f2e;
+}
+
+.total-price {
+  color: #c80f2e;
+}
+
+.adress-input {
+  height: 50px;
+}
+
+.cart-order-btn {
+  background-color: #fff;
+}
+.cart-order-btn:hover {
+  color: #fff;
+}
+
+footer {
+  background-color: #f1f1f1;
+}
+
+footer p {
+  color: #000;
+}
+
+.fotter-link {
+  color: #c80f2e;
+}
+.fotter-link:hover {
+  color: #970b22;
 }
