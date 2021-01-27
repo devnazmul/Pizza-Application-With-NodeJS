@@ -3,6 +3,18 @@ const ejs = require('ejs')
 const layout = require('express-ejs-layouts')
 const path = require('path')
 const app = express()
+//DB
+const mongoose = require('mongoose')
+
+// DB CONNECTION
+const dbUrl = 'mongodb://localhost:27017/pizza';
+mongoose.connect(dbUrl, {useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true, useFindAndModify: true});
+const connection = mongoose.connection;
+connection.once('open', () => {
+    console.log('Database connected Succesfully!');
+}).catch( 'err', () =>{
+    console.log('Connection Failed!');
+});
 
 
 //VARIABLESS
@@ -15,36 +27,8 @@ app.set('view engine', 'ejs')
 //ASSETS
 app.use(express.static('public'))
 
-
-
-//REQ RES
-app.get('/' , (req, res)=>{
-    res.render('home')
-});
-app.get('/about' , (req, res)=>{
-    res.render('about')
-});
-app.get('/contact' , (req, res)=>{
-    res.render('contact')
-});
-app.get('/cart' , (req, res)=>{
-    res.render('customer/cart')
-});
-app.get('/registration' , (req, res)=>{
-    res.render('auth/registration')
-});
-app.get('/login' , (req, res)=>{
-    res.render('auth/login')
-});
-app.get('/forgotPass' , (req, res)=>{
-    res.render('auth//forgotPass')
-});
-app.post('/forgotPass' , (req, res)=>{
-    res.render('auth//forgotPass')
-});
-app.get('/menu' , (req, res)=>{
-    res.render('customer/menu')
-});
+//CONNECT TO ROUTES
+require('./routes/web.js')(app);
 
 
 //SERVER

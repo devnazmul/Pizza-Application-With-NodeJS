@@ -17,90 +17,18 @@
         <h1 class="primary-h text-xl font-bold mb-5">All Items</h1>
         <hr class="mb-10">
         <div class="mt-5 container grid grid-cols-4 gap-12">
-
-            <div class="card rounded-lg w-64 text-center">
-                <img class="h-40 mb-4 mx-auto" src="img/hero-img.png" alt="">
-                <div>
-                    <h2 class="text-lg  mb-4 font-bold">Pizza</h2>
-                    <span class=" pizza-size font-light  py-1 px-6 rounded-full uppercase text-xs">small</span>
-                    <div class="flex items-center justify-around my-5">
-                        <p class="font-bold">$40</p>
-                        <button class="secondary-btn px-6 py-1 rounded-full flex items-center font-bold"><span>+ </span> Add</button>
+            <% pizzas.forEach( function(pizza){ %>
+                <div class="card rounded-lg w-64 text-center">
+                    <img class="h-40 mb-4 mx-auto" src="img/<%= pizza.image %>" alt="">
+                    <div>
+                        <h2 class="text-lg  mb-4 font-bold"><%= pizza.name %></h2>
+                        <span class=" pizza-size font-light  py-1 px-6 rounded-full uppercase text-xs"><%= pizza.size %></span>
+                        <div class="flex items-center justify-around my-5">
+                            <p class="font-bold">$<%= pizza.price %></p>
+                            <button class="secondary-btn px-6 py-1 rounded-full flex items-center font-bold"><span>+ </span> Add</button>
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="card rounded-lg w-64 text-center">
-                <img class="h-40 mb-4 mx-auto" src="img/hero-img.png" alt="">
-                <div>
-                    <h2 class="text-lg  mb-4 font-bold">Pizza</h2>
-                    <span class=" pizza-size font-light  py-1 px-6 rounded-full uppercase text-xs">small</span>
-                    <div class="flex items-center justify-around my-5">
-                        <p class="font-bold">$40</p>
-                        <button class="secondary-btn px-6 py-1 rounded-full flex items-center font-bold"><span>+ </span> Add</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card rounded-lg w-64 text-center">
-                <img class="h-40 mb-4 mx-auto" src="img/hero-img.png" alt="">
-                <div>
-                    <h2 class="text-lg  mb-4 font-bold">Pizza</h2>
-                    <span class=" pizza-size font-light  py-1 px-6 rounded-full uppercase text-xs">small</span>
-                    <div class="flex items-center justify-around my-5">
-                        <p class="font-bold">$40</p>
-                        <button class="secondary-btn px-6 py-1 rounded-full flex items-center font-bold"><span>+ </span> Add</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card rounded-lg w-64 text-center">
-                <img class="h-40 mb-4 mx-auto" src="img/hero-img.png" alt="">
-                <div>
-                    <h2 class="text-lg  mb-4 font-bold">Pizza</h2>
-                    <span class=" pizza-size font-light  py-1 px-6 rounded-full uppercase text-xs">small</span>
-                    <div class="flex items-center justify-around my-5">
-                        <p class="font-bold">$40</p>
-                        <button class="secondary-btn px-6 py-1 rounded-full flex items-center font-bold"><span>+ </span> Add</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card rounded-lg w-64 text-center">
-                <img class="h-40 mb-4 mx-auto" src="img/hero-img.png" alt="">
-                <div>
-                    <h2 class="text-lg  mb-4 font-bold">Pizza</h2>
-                    <span class=" pizza-size font-light  py-1 px-6 rounded-full uppercase text-xs">small</span>
-                    <div class="flex items-center justify-around my-5">
-                        <p class="font-bold">$40</p>
-                        <button class="secondary-btn px-6 py-1 rounded-full flex items-center font-bold"><span>+ </span> Add</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card rounded-lg w-64 text-center">
-                <img class="h-40 mb-4 mx-auto" src="img/hero-img.png" alt="">
-                <div>
-                    <h2 class="text-lg  mb-4 font-bold">Pizza</h2>
-                    <span class=" pizza-size font-light  py-1 px-6 rounded-full uppercase text-xs">small</span>
-                    <div class="flex items-center justify-around my-5">
-                        <p class="font-bold">$40</p>
-                        <button class="secondary-btn px-6 py-1 rounded-full flex items-center font-bold"><span>+ </span> Add</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card rounded-lg w-64 text-center">
-                <img class="h-40 mb-4 mx-auto" src="img/hero-img.png" alt="">
-                <div>
-                    <h2 class="text-lg  mb-4 font-bold">Pizza</h2>
-                    <span class=" pizza-size font-light  py-1 px-6 rounded-full uppercase text-xs">small</span>
-                    <div class="flex items-center justify-around my-5">
-                        <p class="font-bold">$40</p>
-                        <button class="secondary-btn px-6 py-1 rounded-full flex items-center font-bold"><span>+ </span> Add</button>
-                    </div>
-                </div>
-            </div>
-
+            <% }) %>
         </div>
     </section>
