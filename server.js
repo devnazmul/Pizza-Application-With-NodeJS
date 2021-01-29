@@ -1,8 +1,14 @@
+require('dotenv').config()
 const express = require('express')
 const ejs = require('ejs')
 const layout = require('express-ejs-layouts')
 const path = require('path')
 const app = express()
+const session = require('express-session')
+const flash = require('express-flash')
+
+
+const MongodbStore = require('connect-mongo')(session)
 //DB
 const mongoose = require('mongoose')
 
@@ -17,13 +23,38 @@ connection.once('open', () => {
 });
 
 
-//VARIABLESS
-const PORT = process.env.PORT || 3000
+//SESSION STORE
+const mongoStore = new MongodbStore({
+    mongooseConnection: connection,
+    collection: 'session'
+})
 
+//SESSION CONFIG
+app.use(session({
+    secret: process.env.COOKIE_SECRET,
+    resave: false,
+    store: mongoStore,
+    saveUninitialized: false,
+    cookie: { maxAge: (1000 * 60 * 60 * 24)} // maxAge is 24h
+}))
+
+//USE FLASH
+app.use(flash())
+//VARIABLESS
+const PORT = process.env.PORT || 3300
+
+//set global middleware
+app.use((req, res, next) => {
+    res.locals.session = req.session
+    next()
+})
 //SET TEMPLATE ENGINE
 app.use(layout)
 app.set('views', path.join(__dirname, '/resources/views'))
 app.set('view engine', 'ejs')
+
+app.use(express.json())
+
 //ASSETS
 app.use(express.static('public'))
 

@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 *{ 
     font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
 }
 body{
     background-color: $light;
@@ -15,6 +16,7 @@ body{
     transition: $transition-slow;
     border: 2px solid $prymari;
     cursor: pointer;
+    text-align: center;
 
     &:hover{
         background-color: #fff;
@@ -36,6 +38,23 @@ body{
         color: $light;
     }
 }
+
+#quantityCounter{
+    font-size: .90rem;
+    font-weight: bold;
+    top: -7px;
+    right: -7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background-color: rgb(0, 201, 27);
+    height: 25px;
+    width: 25px;
+    text-align: center;
+    border: 3px solid #fff;
+}
+
 .nav-bar{
     background-color: #fff;
     width: 100%;
@@ -92,10 +111,18 @@ body{
     background-color: #fff;
     flex-direction: column;
 }
-.contact-h1, .about-h1{
+.contact-h1{
+    color: #fff;
+}
+.about-h1{
     color: $prymari;
 }
-
+#Contact{
+    background-color: $prymari;
+}
+.map{
+    height: 1080px;
+}
 .social-links ul li{
     border-radius: 30px;
     padding: 5px 5px;
