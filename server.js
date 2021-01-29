@@ -43,21 +43,25 @@ app.use(flash())
 //VARIABLESS
 const PORT = process.env.PORT || 3300
 
-//set global middleware
-app.use((req, res, next) => {
-    res.locals.session = req.session
-    next()
-})
+
 //SET TEMPLATE ENGINE
 app.use(layout)
 app.set('views', path.join(__dirname, '/resources/views'))
 app.set('view engine', 'ejs')
 
-app.use(express.json())
+
 
 //ASSETS
 app.use(express.static('public'))
 
+// enable json support
+app.use(express.json())
+
+//set global middleware
+app.use((req, res, next) => {
+    res.locals.session = req.session
+    next()
+})
 //CONNECT TO ROUTES
 require('./routes/web.js')(app);
 

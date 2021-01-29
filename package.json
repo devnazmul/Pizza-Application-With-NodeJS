@@ -24,6 +24,7 @@
     "express-session": "^1.17.1",
     "mongo": "^0.1.0",
     "mongoose": "^5.11.13",
+    "noty": "^3.2.0-beta",
     "touch": "^3.1.0"
   },
   "devDependencies": {

@@ -24,7 +24,7 @@
                     <li class="mx-2"><a href="/login">Log in</a></li>
                     <li class="mx-2"><a href="/registration">Create Acount</a></li>
                     <li class="mx-2 relative">
-                        <span id="quantityCounter" class="absolute rounded-full"><%= %></span>
+                        <span id="quantityCounter" class="absolute py-3 px-3 rounded-full"><%= session.cart ? session.cart.totalQuantity : '0' %></span>
                         <a class="primary-btn font-bold block cart-btn px-10 py-1 rounded-full" href="/cart"><i class="fab fa-opencart"></i></a></li>
                 </ul>
             </div>
