@@ -54,6 +54,8 @@ app.set('view engine', 'ejs')
 //ASSETS
 app.use(express.static('public'))
 
+//enable url encodaded
+app.use(express.urlencoded({extended: false}))
 // enable json support
 app.use(express.json())
 

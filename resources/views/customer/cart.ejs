@@ -1,140 +1,76 @@
 <!--                  CART_SECTION                 -->
 <section class="cart bg-white py-20 px-5">
     <div class="container mx-auto items-center px-5">
-        <!-- <div class="empty-cart text-center">
-            <h1 class="cart-h1 text-5xl font-bold mb-10">Cart</h1>
-            <h2 class="font-bold">OO OW! Your Cart Is Empty 😭.</h2>
-            <p class="text-gray-500 font-thin">You haven't add any item to your cart. Please add something on cart than cheack out.</p>
-            <div class="mx-auto">
-                <img class="mx-auto w-2/5" src="img/emptyCart.png" alt="">
-                <a href="/menu" class="inline-block text-white cart-btn px-10 py-1 my-5 rounded-full">Go back</a>
-            </div>
-        </div> -->
+        <% if(session.cart){ %>
+            <div class="full-cart">
+                <h2 class="primary-h text-3xl font-bold mt-10"><span><i class="fab fa-opencart"></i></span> Order summary</h2>
+                <hr class="my-5">
 
-        <div class="full-cart">
-            <h2 class="primary-h text-3xl font-bold mt-10"><span><i class="fab fa-opencart"></i></span> Order summary</h2>
-            <hr class="my-5">
-            <div>
-                <div class="cart-items-holder flex w-full rounded-xl shadow-lg mt-7 pl-5">
-                    <img class="w-1/6 rounded-l-xl" src="img/hero-img.png" alt="">
-                    <div class="w-5/6 flex items-center justify-around">
-                        <div class="mx-auto">
-                            <h2 class="text-3xl  mb-4 font-bold">Pizza Name</h2>
-                            <span>small</span>
+                <div>
+
+                   
+                        <div class="cart-items-holder flex w-full rounded-xl shadow-lg mt-7 pl-5">
+                            <img class="w-1/6 rounded-l-xl" src="img/hero-img.png" alt="">
+                            <div class="w-5/6 flex items-center justify-around">
+                                <div class="mx-auto">
+                                    <h2 class="text-3xl  mb-4 font-bold"><%= pizza %> </h2>
+                                    <span>small</span>
+                                </div>
+                                <div class="mx-auto">
+                                    <p class="text-xl" ><span>1</span> Pcs</p>
+                                </div>
+                                <div class="mx-auto">
+                                    <p class=" text-xl font-bold" ><span>$</span> 30</p>
+                                </div>
+                                <div class="mx-auto">
+                                    <button class="secondary-btn px-6 py-1 rounded-full inline-block items-center font-bold" href="#">Remove</button>
+                                </div>
+                            </div>
                         </div>
-                        <div class="mx-auto">
-                            <p class="text-xl" ><span>1</span> Pcs</p>
-                        </div>
-                        <div class="mx-auto">
-                            <p class=" text-xl font-bold" ><span>$</span> 30</p>
-                        </div>
-                        <div class="mx-auto">
-                            <button class="secondary-btn px-6 py-1 rounded-full inline-block items-center font-bold" href="#">Remove</button>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="cart-items-holder flex w-full rounded-xl shadow-lg mt-7 pl-5">
-                    <img class="w-1/6 rounded-l-xl" src="img/hero-img.png" alt="">
-                    <div class="w-5/6 flex items-center justify-around">
-                        <div class="mx-auto">
-                            <h2 class="text-3xl  mb-4 font-bold">Pizza Name</h2>
-                            <span>small</span>
-                        </div>
-                        <div class="mx-auto">
-                            <p class="text-xl" ><span>1</span> Pcs</p>
-                        </div>
-                        <div class="mx-auto">
-                            <p class=" text-xl font-bold" ><span>$</span> 30</p>
-                        </div>
-                        <div class="mx-auto">
-                            <button class="secondary-btn px-6 py-1 rounded-full inline-block items-center font-bold" href="#">Remove</button>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="cart-items-holder flex w-full rounded-xl shadow-lg mt-7 pl-5">
-                    <img class="w-1/6 rounded-l-xl" src="img/hero-img.png" alt="">
-                    <div class="w-5/6 flex items-center justify-around">
-                        <div class="mx-auto">
-                            <h2 class="text-3xl  mb-4 font-bold">Pizza Name</h2>
-                            <span>small</span>
-                        </div>
-                        <div class="mx-auto">
-                            <p class="text-xl" ><span>1</span> Pcs</p>
-                        </div>
-                        <div class="mx-auto">
-                            <p class=" text-xl font-bold" ><span>$</span> 30</p>
-                        </div>
-                        <div class="mx-auto">
-                            <button class="secondary-btn px-6 py-1 rounded-full inline-block items-center font-bold" href="#">Remove</button>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="cart-items-holder flex w-full rounded-xl shadow-lg mt-7 pl-5">
-                    <img class="w-1/6 rounded-l-xl" src="img/hero-img.png" alt="">
-                    <div class="w-5/6 flex items-center justify-around">
-                        <div class="mx-auto">
-                            <h2 class="text-3xl  mb-4 font-bold">Pizza Name</h2>
-                            <span>small</span>
-                        </div>
-                        <div class="mx-auto">
-                            <p class="text-xl" ><span>1</span> Pcs</p>
-                        </div>
-                        <div class="mx-auto">
-                            <p class=" text-xl font-bold" ><span>$</span> 30</p>
-                        </div>
-                        <div class="mx-auto">
-                            <button class="secondary-btn px-6 py-1 rounded-full inline-block items-center font-bold" href="#">Remove</button>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="cart-items-holder flex w-full rounded-xl shadow-lg mt-7 pl-5">
-                    <img class="w-1/6 rounded-l-xl" src="img/hero-img.png" alt="">
-                    <div class="w-5/6 flex items-center justify-around">
-                        <div class="mx-auto">
-                            <h2 class="text-3xl  mb-4 font-bold">Pizza Name</h2>
-                            <span>small</span>
-                        </div>
-                        <div class="mx-auto">
-                            <p class="text-xl" ><span>1</span> Pcs</p>
-                        </div>
-                        <div class="mx-auto">
-                            <p class=" text-xl font-bold" ><span>$</span> 30</p>
-                        </div>
-                        <div class="mx-auto">
-                            <button class="secondary-btn px-6 py-1 rounded-full inline-block items-center font-bold" href="#">Remove</button>
+                        <hr class="my-10">
+                  
+
+
+
+                    <div class="text-right px-20">
+                        <span class="text-xl font-bold">Total Amount:</span>
+                        <span class="total-price text-xl font-bold"><span>$</span> 5000</span>
+                        <div class="mt-7">
+
+                            <form action="/" class="bg-white">
+                                <input class="adress-input shadow appearance-none border rounded w-1/3 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="number" type="phone" placeholder="Mobile Number"  required>
+                                <input class="adress-input shadow appearance-none border rounded w-1/3 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="adress" type="text" placeholder="Your adress"  required>
+                                <div>
+                                    <input type="submit" value="Order Now" class="cart-order-btn my-10 secondary-btn px-6 py-1 rounded-full inline-block items-center font-light text-3xl">
+                                </div>
+                            </form>
+
+                            <div class="w-full ">
+                                <div class="flex flex-row-reverse  text-right">
+                                    <h2 class="primary-h text-xl bg-red-100 px-10 py-5 rounded">You are not loged in. Please log in before order.</h2>
+                                </div>
+                                <a href="/login" class="cart-order-btn my-10 secondary-btn px-10 py-2 rounded-full inline-block items-center font-light text-3xl">Log in</a>
+                            </div>
+                        
                         </div>
                     </div>
                 </div>
             </div>
+       
+
+
+
+            <div class="empty-cart text-center">
+                <h1 class="cart-h1 text-5xl font-bold mb-10">Cart</h1>
+                <h2 class="font-bold">OO OW! Your Cart Is Empty 😭.</h2>
+                <p class="text-gray-500 font-thin">You haven't add any item to your cart. Please add something on cart than cheack out.</p>
+                <div class="mx-auto">
+                    <img class="mx-auto w-2/5" src="img/emptyCart.png" alt="">
+                    <a href="/menu" class="inline-block text-white cart-btn px-10 py-1 my-5 rounded-full">Go back</a>
+                </div>
+            </div>
+    
+
             
-            <hr class="my-10">
-
-         
-            <div class="text-right px-20">
-                <span class="text-xl font-bold">Total Amount:</span>
-                <span class="total-price text-xl font-bold"><span>$</span> 5000</span>
-                <div class="mt-7">
-                    <!-- <form action="/" class="bg-white">
-                        <input class="adress-input shadow appearance-none border rounded w-1/3 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="number" type="phone" placeholder="Mobile Number"  required>
-                        <input class="adress-input shadow appearance-none border rounded w-1/3 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="adress" type="text" placeholder="Your adress"  required>
-                        <div>
-                            <input type="submit" value="Order Now" class="cart-order-btn my-10 secondary-btn px-6 py-1 rounded-full inline-block items-center font-light text-3xl">
-                        </div>
-                    </form> -->
-                    <div class="w-full ">
-                        <div class="flex flex-row-reverse  text-right">
-                            <h2 class="primary-h text-xl bg-red-100 px-10 py-5 rounded">You are not loged in. Please log in before order.</h2>
-                        </div>
-                        <a href="/login" class="cart-order-btn my-10 secondary-btn px-10 py-2 rounded-full inline-block items-center font-light text-3xl">Log in</a>
-                    </div>
-                    
-                </div>
-            </div>
-
-        </div>
     </div>
 </section>

@@ -15,6 +15,7 @@ module.exports = function webRoutes(app) {
     app.get('/menu' , menuController().menu);
     //REGISTRATION ROUTE
     app.get('/registration' , authController().registration);
+    app.post('/registration', authController().postRegistration);
     //LOHIN ROUTE
     app.get('/login' , authController().login);
     //FORGOT PASS ROUTE
